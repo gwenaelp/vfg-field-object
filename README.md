@@ -15,7 +15,7 @@
 
 ### Without schema
 
-![Without schema](https://github.com/gwenaelp/vfg-field-sourcecode/blob/master/docs/preview1.png)
+![Without schema](https://github.com/gwenaelp/vfg-field-object/blob/master/docs/preview1.png)
 
 ```
 {
@@ -38,7 +38,7 @@
 
 ### With schema
 
-![With schema](https://github.com/gwenaelp/vfg-field-sourcecode/blob/master/docs/preview2.png)
+![With schema](https://github.com/gwenaelp/vfg-field-object/blob/master/docs/preview2.png)
 
 ```
 {
