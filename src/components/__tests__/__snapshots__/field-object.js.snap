@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`field-object.vue should match the snapshot 1`] = `
+<div>
+  <div>
+    <table
+      id=""
+    />
+     
+    <select>
+      <option
+        value="string"
+      >
+        String
+      </option>
+       
+      <option
+        value="number"
+      >
+        Number
+      </option>
+       
+      <option
+        value="boolean"
+      >
+        Boolean
+      </option>
+    </select>
+     
+    <input
+      type="text"
+    />
+     
+    <input
+      type="button"
+      value="Add key"
+    />
+  </div>
+</div>
+`;
