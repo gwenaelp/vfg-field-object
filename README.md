@@ -141,10 +141,18 @@ Vue.use(ModuleLibrary);
 <!-- Components are registered globally -->
 ```
 
-### After that, you can use it in your templates:
+### After that, you can use it with Vue Form Generator:
 
-```html
-<field-object></field-object>
+```json
+  schema: {
+    fields: [
+      {
+        type: "object",
+        label: "My object",
+        model: "myObject"
+      }
+    ]
+  }
 ```
 
 ## Changelog
