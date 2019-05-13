@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="schema.schema">
-      <vue-form-generator :schema="schema.schema" :model="value"></vue-form-generator>
+      <vue-form-generator :schema="schema.schema" :model="value" v-on="$listeners"></vue-form-generator>
     </div>
     <div v-else>
       <table :id="getFieldID(schema)" :class="schema.fieldClasses">
@@ -77,6 +77,7 @@
         delete keyTypes[index];
 
         this.keyTypes = { ...keyTypes };
+        this.$emit('model-updated', this.model, this.schema)
       },
 
       addKey() {
@@ -84,6 +85,7 @@
         Vue.set(this.value, this.newKeyName, undefined);
         Vue.set(this.keyTypes, this.newKeyName, this.newKeyType);
         this.newKeyName = "";
+        this.$emit('model-updated', this.model, this.schema)
       }
     }
   };
