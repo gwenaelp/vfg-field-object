@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="schema.schema">
-      <vue-form-generator :schema="schema.schema" :model="value"></vue-form-generator>
+      <vue-form-generator :schema="schema.schema" :model="value" :options="formOptions"></vue-form-generator>
     </div>
     <div v-else>
       <table :id="getFieldID(schema)" :class="schema.fieldClasses">
