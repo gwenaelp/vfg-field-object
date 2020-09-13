@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-attributes="schema.attributes">
     <div v-if="schema.schema">
       <vue-form-generator :schema="schema.schema" :model="value" :options="formOptions"></vue-form-generator>
     </div>
