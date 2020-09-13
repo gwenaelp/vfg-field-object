@@ -71,12 +71,12 @@
         let value = this.value;
         delete value[index];
 
-        this.value = { ...value };
+        this.value = JSON.parse(JSON.stringify(value));
 
         let keyTypes = this.keyTypes;
         delete keyTypes[index];
 
-        this.keyTypes = { ...keyTypes };
+        this.keyTypes = JSON.parse(JSON.stringify(keyTypes));
       },
 
       addKey() {
@@ -88,7 +88,3 @@
     }
   };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
