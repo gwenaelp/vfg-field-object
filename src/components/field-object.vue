@@ -36,7 +36,6 @@
 
 <script>
   import VueFormGenerator from "vue-form-generator";
-  import Vue from "vue";
 
   export default {
     mixins: [VueFormGenerator.abstractField],
@@ -81,9 +80,11 @@
       },
 
       addKey() {
-        //TODO change to vm.$set
-        Vue.set(this.value, this.newKeyName, undefined);
-        Vue.set(this.keyTypes, this.newKeyName, this.newKeyType);
+        console.log("addKey");
+        this.value[this.newKeyName] = undefined;
+        this.value = { ...this.value };
+        this.keyTypes[this.newKeyName] = this.newKeyType;
+        this.keyTypes = { ...this.keyTypes };
         this.newKeyName = "";
       }
     }
